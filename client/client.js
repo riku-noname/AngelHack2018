@@ -16,7 +16,6 @@ request.onreadystatechange = function () {
         // var result = request.responseText;
     }
 };
-//request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 request.setRequestHeader('Content-Type', 'application/JSON');
 
 request.send(JSON.stringify(data));
