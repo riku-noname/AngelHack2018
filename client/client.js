@@ -1,6 +1,6 @@
 var data={ // 送信データ ('param=value&...')
   "Id" : 1,
-  "HeartBeat" : 85
+  "HeartBeat" : 125
 }
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var url='http://172.20.11.229:3000'; // リクエスト先URL
