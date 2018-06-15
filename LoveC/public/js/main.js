@@ -1,23 +1,8 @@
-/*function StartButtonClick(){
-//  $.getJSON("../routes/data.json", function(sample_list){
-  $.getJSON("./data/data.json", function(sample_list){
-    for(var i in sample_list){
-      console.log(sample_list);
-      var h = '<dt>'
-            + sample_list[i].list
-            + '</dt>'
-            + '<dd>'
-            + sample_list[i].content
-            + '</dd>';
-      $("dl#wrap").append(h);
-    }
-  });
-}
-*/
+var tmp = 0;
 function getJson() {
   //var xmlhttp = createXMLHttpRequest(); //旧バージョンのIEなどに対応する場合
   var xmlhttp = new XMLHttpRequest();
-
+  var sumBeat;
   xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState == 4) {
       if (xmlhttp.status == 200) {
@@ -31,6 +16,12 @@ function getJson() {
         elem.innerText = data[1].Id;
         var elem = document.getElementById("HeartBeat_2");
         elem.innerText = data[1].HeartBeat;
+        //合計計算と判定
+        sumBeat = data[0].HeartBeat + data[1].HeartBeat
+        if(sumBeat > 220 && tmp == 0){
+          playMusic();
+          tmp = -1;
+        }
       } else {
       }
     }
