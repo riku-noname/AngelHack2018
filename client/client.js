@@ -1,9 +1,9 @@
 var data={ // 送信データ ('param=value&...')
-  "Id" : 1,
-  "HeartBeat" : 125
+  "Id" : 2,
+  "HeartBeat" :10
 }
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-var url='http://172.20.11.229:3000'; // リクエスト先URL
+var url='http://192.168.1.27:3000'; // リクエスト先URL
 var request = new XMLHttpRequest();
 request.open('POST', url);
 request.onreadystatechange = function () {

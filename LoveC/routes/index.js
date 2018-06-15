@@ -5,7 +5,7 @@ var router = express.Router();
 //const fs = require('fs');
 var fs = require('fs');
 var path = require('path');
-var dataFile = "./data.json";
+var dataFile = "../public/data/data.json";
 // モデルの宣言
 //const LoveCheck = require('../models/lovecheck');
 
