@@ -8,17 +8,18 @@ function getJson() {
       if (xmlhttp.status == 200) {
         var data = JSON.parse(xmlhttp.responseText);
 
-        var elem = document.getElementById("User_ID_1");
-        elem.innerText = data[0].Id;
-        var elem = document.getElementById("HeartBeat_1");
-        elem.innerText = data[0].HeartBeat;
-        var elem = document.getElementById("User_ID_2");
-        elem.innerText = data[1].Id;
-        var elem = document.getElementById("HeartBeat_2");
-        elem.innerText = data[1].HeartBeat;
+        var elem = document.getElementById("Pressure");
+        var press = parseInt((data[2].Pressure / 700)*100,10)
+        if(press > 100){
+          press = 100
+        }
+
+        elem.innerText = press;
+
+
         //合計計算と判定
         sumBeat = data[0].HeartBeat + data[1].HeartBeat
-        if(sumBeat > 220 && tmp == 0){
+        if(data[2].Pressure > 700 && tmp == 0){
           playMusic();
           tmp = -1;
         }
@@ -34,6 +35,9 @@ function startfnc()
 {
   //関数hyoji()を1000ミリ秒間隔で呼び出す
   setInterval("getJson()",1000);
+  //スタートボタンを削除
+  var d1 = document.getElementById('button_start');
+  d1.parentNode.removeChild(d1);
 }
 
 function createXMLHttpRequest() {

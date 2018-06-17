@@ -2,7 +2,7 @@ var tmp = 0;
 var dataFile = "../data/data.json";
 var heartImg = "../img/beating_heart.gif";
 //var heartImg2 = "../img/heart.jpg";
-var heartImg2 = "../img/heart_1.png";
+var heartImg2 = "../img/heart_a.png";
 function getJson() {
   //var xmlhttp = createXMLHttpRequest(); //旧バージョンのIEなどに対応する場合
   var xmlhttp = new XMLHttpRequest();
