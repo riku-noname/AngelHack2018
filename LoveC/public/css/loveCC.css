@@ -1,0 +1,209 @@
+
+/*************************************
+******************ページ全体の設定************
+*****************************************/
+#site-box {
+  margin-left:auto;    /* 左側マージンを自動的に空ける */
+  margin-right:auto;   /* 右側マージンを自動的に空ける */
+  text-align:left;     /* 中身を左側表示に戻す */
+  background-color: #000000;
+  width: 100%;
+  position: relative;
+  height: auto ;
+  /*height: auto !important;*/
+  height: 100%;
+  min-height: 100%
+}
+.div1,.div2,.div3{
+  margin: -15px 0 0 0;
+  height: 78%;
+  /*padding-bottom: 700px;*/
+  float: left;
+  border-color: yellow;
+}
+.boxA {
+  margin: 0 0 0 0;
+  height: 100%;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+#main-box {
+    background-color: #ffffff;
+}
+#left-box {
+    /*padding-bottom: 700px;*/
+    width: calc(100% / 5);
+    /*width: 300px;*/
+    background-color: #444444;
+}
+#right-box {
+    width: calc(100% / 5);
+/*    width: 300px;*/
+    background-color: #444444;
+}
+#center-box {
+    width: calc(100% * 0.6);
+    background-color: #000000;
+}
+body {
+  margin:0px;          /* ページ全体のmargin */
+  padding:0px;         /* ページ全体のpadding */
+  text-align:center;   /* 下記のautoに未対応用のセンタリング */
+  background-color: #333333;
+  color: #000000;
+}
+body , html {
+    height: 100%;
+}
+
+
+/*************************************
+******************タイトルバー設定************
+*****************************************/
+.head{
+  background-color: #313131;
+}
+.globalNav {
+    list-style: none;
+    overflow: hidden;
+}
+
+.globalNav li {
+    float: left;
+    border-right: 1px solid #DDD;
+}
+
+.globalNav li a {
+    font-size: 150%;
+    font-family: "Comic Sans MS";
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #AAA;
+}
+
+.globalNav li a span {
+    display: block;
+    margin: 3px 0 0 0;
+    color: #AAA;
+    text-transform: uppercase;
+    font-size: 80%;
+    letter-spacing: 1px;
+}
+
+.globalNav li a:hover {
+    background: #EEE;
+}
+
+.globalNav li.active a {
+    background: #333;
+    color: #EEE;
+}
+
+#name {
+  font-size: 300%;
+  font-family: "Comic Sans MS";
+  color:#ffffff;
+  position:absolute;
+  top:-50px;
+  right:30px;
+  z-index: 3;
+}
+
+/*************************************
+******************left-boxの設定************
+*****************************************/
+
+
+.heartbeat{
+  height: 100%;
+  text-align: center;
+}
+.heartbeat_p{
+  font-size: 800%;
+  font-family: "Comic Sans MS";
+  color:#ffffff;
+}
+
+.love-check{
+  padding-top: 10%;
+  text-align: center;
+}
+
+
+/*************************************
+*****************画像************
+*****************************************/
+
+img#heartbeat_img_c {
+  width: 300px;
+  height: 300px;
+  border-bottom: none;
+  outline:none;
+}
+
+
+
+/*************************************
+******************ボタン設定************
+*****************************************/
+.button-challenge {
+  font-size: 380%;
+  display: inline-block;
+  text-decoration: none;
+  background: #ff8181;
+  color: #FFF;
+  width: 320px;
+  height: 320px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  border-bottom: none;
+  outline:none;
+}
+
+.button-challenge:hover{
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+
+
+.love-challenge{
+  text-align:center;
+}
+
+/*************************************
+******************ボタン設定************
+*****************************************/
+
+
+/*************************************
+******************フッターの設定************
+*****************************************/
+footer{
+  position: fixed;
+  bottom: 0;
+    font-size: 180%;
+    font-family: "Comic Sans MS";
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #313131;
+}
+footer address{
+    color: #fff;
+    letter-spacing: 5px;
+}

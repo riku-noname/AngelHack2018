@@ -2,32 +2,78 @@
 <html>
 <head lang="jp">
 	<meta charset="UTF-8">
-	<title>♡♡♡ Love Check ♡♡♡</title>
+	<title>Love Check</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/main.js"></script>
-  <script type="text/javascript" src="./js/audio.js"></script>
-	<link rel="stylesheet" href="css/lovecheck.css">
+	<script type="text/javascript" src="./js/love_check/love_check.js"></script>
+	<script type="text/javascript" src="./js/love_check/sendinfo.js"></script>
+  <link rel="stylesheet" href="css/loveCC.css">
 </head>
 <body>
-<header>
-	<h1>♡♡♡ Love Check ♡♡♡</h1>
-</header>
-<div class="lovecheck">
-  <button class="love-check-start" onclick="startfnc();" >START</button>
-  <button class="love-check-start">END</button>
-</div>
+	<div id="site-box">
+	<div class = "head">
+		<ul class="globalNav">
+			<li onclick="location.href='TopPage.html'">
+					<a href="#">
+							<strong>ホーム</strong>
+							<span>home</span>
+					</a>
+			</li>
+			<li class="active">
+					<a href="#">
+							<strong>ラブチェック</strong>
+							<span>love check</span>
+					</a>
+			</li>
+			<li onclick="location.href='LoveChallenge.html'">
+					<a href="#">
+							<strong>ラブチャレンジ</strong>
+							<span>love challenge</span>
+					</a>
+			</li>
+		</ul>
+	</div>
+	<p id = "name">LoveCC</p>
+	<!--
+  <header>
+  	<h1>♡♡♡ Love Check ♡♡♡</h1>
+  </header>
+  -->
+	<div class = "boxA">
+	<div id="left-box" class = "div1">
+    <div class="heartbeat">
+		    <img id="heartbeat_img_l">
+        <div class="heartbeat_p">
+		    <span id="HeartBeat_1" ></span>
+      </div>
+    </div>
 
-User ID:<span id="User_ID_1"></span><br />
-HeartBeat:<span id="HeartBeat_1"></span><br />
-User ID:<span id="User_ID_2"></span><br />
-HeartBeat:<span id="HeartBeat_2"></span><br />
+	  User ID:<span id="User_ID_1"></span><br />
+	</div>
 
-<div>
-  <p class = "title">♡♡♡♡♡♡♡♡♡♡♡♡</p>
-</div>
+  <div id="center-box" class = "div2">
+    <div class="love-check">
+      <button id="button_start" class="button-challenge" onclick="startfnc();" >START</button>
+    </div>
+		<div class="love-check">
+			<img id="heartbeat_img_c">
+		</div>
+  </div>
 
-<footer>
-	<address>AngelHack2018 Osaka.</address>
-</footer>
+	<div id="right-box" class = "div3">
+    <div class="heartbeat">
+		    <img id="heartbeat_img_r">
+        <div class="heartbeat_p">
+		    <span id="HeartBeat_2"></span>
+        </div>
+   </div>
+	  User ID:<span id="User_ID_2"></span><br />
+
+	</div>
+  </div>
+
+  <footer>
+    <address>Team Bright Light</address>
+  	<address>AngelHack2018 Osaka</address>
+  </footer>
 </body>
 </html>
