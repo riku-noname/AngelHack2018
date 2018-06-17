@@ -1,4 +1,5 @@
 var tmp = 0;
+var tmp2 = 0;
 function getJson() {
   //var xmlhttp = createXMLHttpRequest(); //旧バージョンのIEなどに対応する場合
   var xmlhttp = new XMLHttpRequest();
@@ -10,8 +11,9 @@ function getJson() {
 
         var elem = document.getElementById("Pressure");
         var press = parseInt((data[2].Pressure / 700)*100,10)
-        if(press > 100){
+        if(press > 100 || tmp2 == 1){
           press = 100
+          tmp2=1;
         }
 
         elem.innerText = press;
