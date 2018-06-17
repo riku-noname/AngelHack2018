@@ -90,7 +90,7 @@ router.post('/', function(request, response){
       "utf-8"
     );
 
-    console.log("データ更新:",jdata);
+/*    console.log("データ更新:",jdata);
 
     if(jdata[3].Start == 1 || jdata[3].Start == 2){
 
@@ -119,7 +119,7 @@ router.post('/', function(request, response){
             heart_1_init = jdata[1].init,
             heart_2_init = jdata[1].init;
 
-
+*/
   /*      if(flag == 1 && heart_1_init == 0){
           heart_1_init = heart_1;
         }
@@ -127,7 +127,7 @@ router.post('/', function(request, response){
           heart_2_init = heart_2;
         }
 */
-        if(heart_1 >= 0 && heart_1-heart_1_init < 5){
+/*        if(heart_1 >= 0 && heart_1-heart_1_init < 5){
             var color_1 = JSON.parse('{"red":'+0+',"green":'+0+',"blue":'+255+',"brightness":100}');
         }
         else if(heart_1-heart_1_init >= 5 && heart_1-heart_1_init < 10){
@@ -213,7 +213,7 @@ router.post('/', function(request, response){
             }
         }).start();
       };
-    }
+    }*/
 });
 
 
